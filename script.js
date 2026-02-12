@@ -1,33 +1,32 @@
-// Data for Projects
 const projects = [
-    {
-      title: "Healthcare Data Analysis",
-      description: "End-to-end analytics pipeline on healthcare datasets to uncover patient risk trends. Built data models to standardize complex records.",
-      tech: ["Python", "Pandas", "ETL", "Tableau"],
-      github: "https://github.com/NithinThota9/Healthcare-Data-Analysis-main",
-      external: null // Link to live demo if exists
-    },
-    {
-      title: "Amazon Prime Video Dashboard",
-      description: "Interactive dashboard visualizing content distribution strategies. Processed 10k+ metadata records to analyze genre popularity.",
-      tech: ["Power BI", "DAX", "Data Modeling"],
-      github: "https://github.com/NithinThota9/Amazon-Prime-Video-Dashboard-Using-PowerBi-main",
-      external: null
-    },
-    {
-      title: "Income Statement Analyzer",
-      description: "Financial reporting tool automating P&L statement generation. KPI tracking for revenue, expenses, and net profit margins.",
-      tech: ["Power BI", "SQL", "Excel"],
-      github: "https://github.com/NithinThota9/Simple-Income-Statement-Dashboard",
-      external: null
-    }
-  ];
-  
-  // Render Projects
-  const projectGrid = document.getElementById("projectGrid");
-  
-  if (projectGrid) {
-    projectGrid.innerHTML = projects.map(project => `
+  {
+    title: "Polypharmacy Effects System",
+    description: "Built a scalable data pipeline to ingest, transform, and publish healthcare datasets for adverse drug interaction analysis. Reduced insight turnaround time by 40%.",
+    tech: ["Python", "ETL", "Healthcare Data"],
+    github: "https://github.com/NithinThota9",
+    external: null
+  },
+  {
+    title: "Urban Audio Classification",
+    description: "Developed an end-to-end data processing workflow to generate reusable feature datasets and evaluation metrics for intelligent audio analysis.",
+    tech: ["Python", "Audio Processing", "Data Pipelines"],
+    github: "https://github.com/NithinThota9",
+    external: null
+  },
+  {
+    title: "Travelers & Accenture Work",
+    description: "Implemented enterprise-scale ETL pipelines using SSIS and SQL Server. Designed governed data models and Tableau/Power BI dashboards for claims and utilization analytics.",
+    tech: ["SQL Server", "SSIS", "Tableau", "Power BI"],
+    github: "https://github.com/NithinThota9",
+    external: null
+  }
+];
+
+// Render Projects
+const projectGrid = document.getElementById("projectGrid");
+
+if (projectGrid) {
+  projectGrid.innerHTML = projects.map(project => `
       <div class="card">
         <div class="card-header">
           <i class="ri-folder-3-line folder-icon"></i>
@@ -47,26 +46,26 @@ const projects = [
         </ul>
       </div>
     `).join('');
-  }
-  
-  // Dynamic Year
-  document.getElementById("year").textContent = new Date().getFullYear();
-  
-  // Optional: Intersection Observer for fade-in animations
-  const observerOptions = {
-    threshold: 0.1
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-  
-  document.querySelectorAll('.section').forEach(section => {
-    section.classList.add('fade-in-section'); // Add CSS class for updated styling later if needed
-    observer.observe(section);
+}
+
+// Dynamic Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Optional: Intersection Observer for fade-in animations
+const observerOptions = {
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   });
+}, observerOptions);
+
+document.querySelectorAll('.section').forEach(section => {
+  section.classList.add('fade-in-section'); // Add CSS class for updated styling later if needed
+  observer.observe(section);
+});
