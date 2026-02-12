@@ -4,22 +4,25 @@
   --bg-body: #0f172a;
   --bg-card: #1e293b;
   --bg-alt: #162033;
-  
-  --primary: #38bdf8; /* Sky Blue */
-  --secondary: #22d3ee; /* Cyan */
-  --accent: #818cf8; /* Indigo */
-  
+
+  --primary: #38bdf8;
+  /* Sky Blue */
+  --secondary: #22d3ee;
+  /* Cyan */
+  --accent: #818cf8;
+  /* Indigo */
+
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --text-light: #cbd5e1;
-  
-  --border:rgba(255, 255, 255, 0.08);
+
+  --border: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(56, 189, 248, 0.4);
-  
+
   /* Spacing & Layout */
   --container-width: 1100px;
   --header-height: 70px;
-  
+
   /* Fonts */
   --font-main: 'Inter', sans-serif;
   --font-code: 'JetBrains Mono', monospace;
@@ -239,7 +242,7 @@ ul {
   padding: 20px;
   font-family: var(--font-code);
   font-size: 0.85rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -256,9 +259,34 @@ ul {
 
 /* ================= ABOUT ================= */
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-img {
+  flex: 0 0 200px;
+  position: relative;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05) rotate(3deg);
 }
 
 .about-content .lead {
@@ -270,6 +298,18 @@ ul {
 .about-content p {
   color: var(--text-muted);
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-img {
+    flex: auto;
+  }
 }
 
 /* ================= TIMELINE (EXPERIENCE) ================= */
@@ -503,33 +543,34 @@ ul {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
+
   .hero-content {
     order: 2;
   }
-  
+
   .eyebrow {
-      margin: 0 auto 15px;
+    margin: 0 auto 15px;
   }
-  
+
   .hero-text {
-      margin-left: auto;
-      margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
+
   .hero-btns {
     justify-content: center;
   }
-  
+
   .hero-visual {
     order: 1;
     margin-bottom: 30px;
   }
-  
+
   .nav-links {
-    display: none; /* Hide for now - simple mobile menu would need JS toggle */
+    display: none;
+    /* Hide for now - simple mobile menu would need JS toggle */
   }
-  
+
   .mobile-menu-btn {
     display: block;
   }
@@ -537,7 +578,7 @@ ul {
   .section-header h2 {
     font-size: 1.8rem;
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
