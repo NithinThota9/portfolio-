@@ -1,5 +1,12 @@
 const projects = [
   {
+    title: "Job Market Analytics",
+    description: "End-to-end BI engineering case study analyzing job market trends. Built ETL pipelines and interactive dashboards to visualize salary and skill demand data.",
+    tech: ["Tableau", "SQL", "Python", "ETL"],
+    github: "https://github.com/NithinThota9/Job-Market-Analytics-End-to-End-BI-Engineering-Case-Study",
+    external: null
+  },
+  {
     title: "Healthcare Data Analysis",
     description: "End-to-end analytics pipeline on healthcare datasets to uncover patient risk trends. Built data models to standardize complex records.",
     tech: ["Python", "Pandas", "ETL", "Tableau"],
