@@ -3,137 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Nithin Thota - Data Engineer Portfolio. Specializing in ETL pipelines, cloud architecture, and data analytics.">
   <title>Nithin Thota | Data Engineer</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono for Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Remix Icons for professional icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="dark-theme">
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container nav">
-    <div class="brand">
-      <h1>Nithin Thota</h1>
-      <p>Data Engineer | Data Enthusiast</p>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">NT<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn-primary">Contact Me</a>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="ri-menu-3-line"></i>
+      </div>
     </div>
+  </nav>
 
-    <nav class="links">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="eyebrow">Data Engineering & Analytics</span>
+        <h1>Building Robust <span class="highlight">Data Pipelines</span> & Scalable Architecture.</h1>
+        <p class="hero-text">
+          I transform complex, raw data into reliable, actionable insights. 
+          Specializing in cloud data warehouses, ETL automation, and scalable data modeling.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work <i class="ri-arrow-right-line"></i></a>
+          <a href="https://github.com/NithinThota9" target="_blank" class="btn btn-outline"><i class="ri-github-fill"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/nithinthota" target="_blank" class="btn btn-outline"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+         <!-- Geometric / Abstract Data Visual could go here using CSS or SVG -->
+         <div class="code-block">
+<pre>
+<code class="language-python">
+class DataEngineer:
+    def __init__(self):
+        self.focus = "Efficiency"
+        self.stack = [
+            "Python", "SQL", 
+            "AWS", "Snowflake", 
+            "Airflow"
+        ]
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h2>Designing reliable data pipelines and turning raw data into insights.</h2>
-    <p>
-      I work across data ingestion, transformation, and analytics —
-      focusing on scalable systems, clean models, and business impact.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn outline" href="#contact">Contact</a>
+    def build_pipeline(self):
+        return "Reliable & Scalable"
+</code>
+</pre>
+         </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container">
-    <div class="section-title">
-      <h3>Projects</h3>
-      <p>End-to-end data and analytics projects I can explain in depth.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="line"></div>
+      </div>
+      <div class="about-content">
+        <p class="lead">
+          I am a passionate <strong>Data Engineer</strong> dedicated to designing and maintaining data systems that empower organizations to make data-driven decisions.
+        </p>
+        <p>
+          With a strong foundation in computer science and hands-on experience in modern data stacks, I focus on optimizing data flow and collection for cross-functional teams. My expertise lies in <span class="text-accent">Data Modeling</span>, <span class="text-accent">ETL/ELT Processes</span>, and <span class="text-accent">Cloud Infrastructure</span>.
+        </p>
+        <p>
+          I enjoy solving complex problems where data quality, performance, and scalability are critical.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div id="projectGrid" class="grid"></div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section alt">
-  <div class="container">
-    <div class="section-title">
-      <h3>Skills</h3>
-      <p>Tools and technologies I use regularly.</p>
+  <!-- EXPERIENCE (New Section for Professionalism) -->
+  <section id="experience" class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <div class="line"></div>
+      </div>
+      
+      <div class="timeline">
+        <!-- Placeholder 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">202X - Present</div>
+          <div class="timeline-content">
+            <h3>Data Engineer</h3>
+            <span class="company">Company Name</span>
+            <p>
+              Designed and implemented scalable data pipelines using Python and SQL. 
+              Optimized query performance by 40% in Snowflake. 
+              Automated daily reporting workflows using Apache Airflow.
+            </p>
+            <div class="tech-stack-mini">
+              <span>Python</span><span>Snowflake</span><span>Airflow</span>
+            </div>
+          </div>
+        </div>
+         <!-- Placeholder 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">202X - 202X</div>
+          <div class="timeline-content">
+            <h3>Data Analyst / Junior DE</h3>
+            <span class="company">Company Name</span>
+            <p>
+              Collaborated with stakeholders to define KPI requirements. 
+              Built interactive dashboards in Power BI. 
+              Maintained ETL scripts for data ingestion.
+            </p>
+            <div class="tech-stack-mini">
+              <span>SQL</span><span>Power BI</span><span>Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="chips">
-      <span class="chip">Python</span>
-      <span class="chip">SQL</span>
-      <span class="chip">Data Engineering</span>
-      <span class="chip">ETL / ELT</span>
-      <span class="chip">Snowflake</span>
-      <span class="chip">Power BI</span>
-      <span class="chip">Apache Airflow</span>
-      <span class="chip">Git & GitHub</span>
-      <span class="chip">Cloud Fundamentals</span>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <div class="line"></div>
+      </div>
+      <!-- Grid populated by JS -->
+      <div id="projectGrid" class="project-grid"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container">
-    <div class="section-title">
-      <h3>About Me</h3>
+  <!-- SKILLS -->
+  <section id="skills" class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical Skills</h2>
+        <div class="line"></div>
+      </div>
+      
+      <div class="skills-wrapper">
+        <div class="skill-category">
+          <h3><i class="ri-code-s-slash-line"></i> Languages</h3>
+          <div class="skill-list">
+            <span>Python</span>
+            <span>SQL (Advanced)</span>
+            <span>Java</span>
+            <span>Scala</span>
+            <span>Bash/Shell</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="ri-database-2-line"></i> Data & Databases</h3>
+          <div class="skill-list">
+             <span>Snowflake</span>
+             <span>PostgreSQL</span>
+             <span>MySQL</span>
+             <span>NoSQL (MongoDB)</span>
+             <span>Data Warehousing</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="ri-server-line"></i> Tools & Cloud</h3>
+          <div class="skill-list">
+            <span>AWS (S3, EC2, Lambda)</span>
+            <span>Apache Airflow</span>
+            <span>Docker</span>
+            <span>Git/GitHub</span>
+            <span>Terraform</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="ri-bar-chart-grouped-fill"></i> Analytics & BI</h3>
+            <div class="skill-list">
+              <span>Power BI</span>
+              <span>Tableau</span>
+              <span>Pandas/NumPy</span>
+              <span>dbt</span>
+            </div>
+          </div>
+      </div>
     </div>
+  </section>
 
-    <div class="about">
-      <p>
-        I’m a data engineer who enjoys building dependable data pipelines and
-        analytics solutions that help teams make better decisions.
-      </p>
-      <p>
-        My interests lie in data modeling, pipeline reliability, performance tuning,
-        and turning complex datasets into something useful and understandable.
-      </p>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Let's Work Together</h2>
+        <p>I'm currently available for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <a href="mailto:nithinthota999@gmail.com" class="btn btn-primary btn-lg"><i class="ri-mail-send-line"></i> Say Hello</a>
+        
+        <div class="social-links-big">
+          <a href="https://www.linkedin.com/in/nithinthota" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="https://github.com/NithinThota9" target="_blank"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section alt">
-  <div class="container">
-    <div class="section-title">
-      <h3>Contact</h3>
-      <p>Let’s connect.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Nithin Thota</strong>.</p>
+      <p class="copyright">&copy; <span id="year"></span> All rights reserved.</p>
     </div>
+  </footer>
 
-    <div class="contact">
-      <p>
-  <strong>Email:</strong>
-  <a href="mailto:nithinthota999@gmail.com">
-    nithinthota999@gmail.com
-  </a>
-</p>
-      <p><strong>Phone:</strong> 913-218-9883</p>
-      <p>
-        <strong>LinkedIn:</strong>
-        <a href="https://www.linkedin.com/in/nithinthota" target="_blank">
-          linkedin.com/in/nithinthota
-        </a>
-      </p>
-      <p>
-        <strong>GitHub:</strong>
-        <a href="https://github.com/NithinThota9" target="_blank">
-          github.com/NithinThota9
-        </a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 Nithin Thota · Built from scratch</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

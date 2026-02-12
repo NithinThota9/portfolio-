@@ -1,74 +1,72 @@
+// Data for Projects
 const projects = [
-  {
-    title: "Healthcare Data Analysis",
-    overview:
-      "Exploratory and analytical project focused on healthcare datasets to uncover trends and potential risk indicators.",
-    details: [
-      "Cleaned and transformed raw healthcare data using Python and Pandas",
-      "Performed exploratory data analysis to identify patterns and anomalies",
-      "Generated insights to support healthcare decision-making"
-    ],
-    tech: ["Python", "Pandas", "Healthcare Analytics"],
-    outcome:
-      "Improved data quality and delivered actionable insights from complex healthcare datasets.",
-    github: "https://github.com/NithinThota9/Healthcare-Data-Analysis-main"
-  },
-  {
-    title: "Amazon Prime Video Analytics Dashboard",
-    overview:
-      "Interactive dashboard analyzing Amazon Prime Video content distribution and trends.",
-    details: [
-      "Modeled and prepared content metadata for analysis",
-      "Built Power BI visuals for genre, rating, and release trends",
-      "Designed dashboard for intuitive exploration by users"
-    ],
-    tech: ["Power BI", "Data Visualization", "Analytics"],
-    outcome:
-      "Enabled quick understanding of content trends through an interactive dashboard.",
-    github:
-      "https://github.com/NithinThota9/Amazon-Prime-Video-Dashboard-Using-PowerBi-main"
-  },
-  {
-    title: "Income Statement Dashboard",
-    overview:
-      "Financial analytics project visualizing revenue, expenses, and profitability.",
-    details: [
-      "Structured financial data for reporting and analysis",
-      "Created KPIs for revenue, expenses, and net profit",
-      "Designed dashboard for clear financial performance tracking"
-    ],
-    tech: ["Power BI", "Finance Analytics", "Data Modeling"],
-    outcome:
-      "Simplified financial performance review using clear visual KPIs.",
-    github:
-      "https://github.com/NithinThota9/Simple-Income-Statement-Dashboard"
+    {
+      title: "Healthcare Data Analysis",
+      description: "End-to-end analytics pipeline on healthcare datasets to uncover patient risk trends. Built data models to standardize complex records.",
+      tech: ["Python", "Pandas", "ETL", "Tableau"],
+      github: "https://github.com/NithinThota9/Healthcare-Data-Analysis-main",
+      external: null // Link to live demo if exists
+    },
+    {
+      title: "Amazon Prime Video Dashboard",
+      description: "Interactive dashboard visualizing content distribution strategies. Processed 10k+ metadata records to analyze genre popularity.",
+      tech: ["Power BI", "DAX", "Data Modeling"],
+      github: "https://github.com/NithinThota9/Amazon-Prime-Video-Dashboard-Using-PowerBi-main",
+      external: null
+    },
+    {
+      title: "Income Statement Analyzer",
+      description: "Financial reporting tool automating P&L statement generation. KPI tracking for revenue, expenses, and net profit margins.",
+      tech: ["Power BI", "SQL", "Excel"],
+      github: "https://github.com/NithinThota9/Simple-Income-Statement-Dashboard",
+      external: null
+    }
+  ];
+  
+  // Render Projects
+  const projectGrid = document.getElementById("projectGrid");
+  
+  if (projectGrid) {
+    projectGrid.innerHTML = projects.map(project => `
+      <div class="card">
+        <div class="card-header">
+          <i class="ri-folder-3-line folder-icon"></i>
+          <div class="card-links">
+            ${project.github ? `<a href="${project.github}" target="_blank" aria-label="GitHub"><i class="ri-github-line"></i></a>` : ''}
+            ${project.external ? `<a href="${project.external}" target="_blank" aria-label="External Link"><i class="ri-external-link-line"></i></a>` : ''}
+          </div>
+        </div>
+        <a href="${project.github}" target="_blank">
+            <h3 class="card-title">${project.title}</h3>
+        </a>
+        <div class="card-desc">
+          <p>${project.description}</p>
+        </div>
+        <ul class="card-tech">
+          ${project.tech.map(t => `<li>${t}</li>`).join('')}
+        </ul>
+      </div>
+    `).join('');
   }
-];
-
-const grid = document.getElementById("projectGrid");
-
-grid.innerHTML = projects
-  .map(
-    (p) => `
-    <div class="card">
-      <h4>${p.title}</h4>
-
-      <p><strong>Overview:</strong> ${p.overview}</p>
-
-      <ul>
-        ${p.details.map(item => `<li>${item}</li>`).join("")}
-      </ul>
-
-      <div class="tags">
-        ${p.tech.map(t => `<span class="tag">${t}</span>`).join("")}
-      </div>
-
-      <p><strong>Outcome:</strong> ${p.outcome}</p>
-
-      <div class="card-links">
-        <a href="${p.github}" target="_blank">View Code</a>
-      </div>
-    </div>
-  `
-  )
-  .join("");
+  
+  // Dynamic Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+  
+  // Optional: Intersection Observer for fade-in animations
+  const observerOptions = {
+    threshold: 0.1
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.section').forEach(section => {
+    section.classList.add('fade-in-section'); // Add CSS class for updated styling later if needed
+    observer.observe(section);
+  });
