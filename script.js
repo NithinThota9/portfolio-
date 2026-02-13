@@ -1,8 +1,8 @@
 const projects = [
   {
-    title: "Job Market Analytics",
-    description: "End-to-end BI engineering case study analyzing job market trends. Built ETL pipelines and interactive dashboards to visualize salary and skill demand data.",
-    tech: ["Tableau", "SQL", "Python", "ETL"],
+    title: "HR Analytics Dashboard",
+    description: "Interactive HR Analytics Dashboard tracking employee attrition, demographics, and job satisfaction. Visualizes key KPIs like attrition rate (23%) and active workforce trends.",
+    tech: ["Tableau", "SQL", "Excel", "Data Visualization"],
     github: "https://github.com/NithinThota9/Job-Market-Analytics-End-to-End-BI-Engineering-Case-Study",
     external: null
   },
