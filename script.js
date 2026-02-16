@@ -1,16 +1,16 @@
 const projects = [
   {
-    title: "HR Analytics Dashboard",
-    description: "Interactive HR Analytics Dashboard tracking employee attrition, demographics, and job satisfaction. Visualizes key KPIs like attrition rate (23%) and active workforce trends.",
-    tech: ["Tableau", "SQL", "Excel", "Data Visualization"],
-    github: "https://github.com/NithinThota9/Job-Market-Analytics-End-to-End-BI-Engineering-Case-Study",
-    external: null
-  },
-  {
     title: "Healthcare Data Analysis",
     description: "End-to-end analytics pipeline on healthcare datasets to uncover patient risk trends. Built data models to standardize complex records.",
     tech: ["Python", "Pandas", "ETL", "Tableau"],
     github: "https://github.com/NithinThota9/Healthcare-Data-Analysis-main",
+    external: null
+  },
+  {
+    title: "HR Analytics Dashboard",
+    description: "Interactive HR Analytics Dashboard tracking employee attrition, demographics, and job satisfaction. Visualizes key KPIs like attrition rate (23%) and active workforce trends.",
+    tech: ["Tableau", "SQL", "Excel", "Data Visualization"],
+    github: "https://github.com/NithinThota9/Job-Market-Analytics-End-to-End-BI-Engineering-Case-Study",
     external: null
   },
   {
